@@ -1,4 +1,4 @@
-## 10. Install HELM
+## 1. Install HELM
 
 ```bash
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
@@ -8,7 +8,7 @@ chmod 700 get_helm.sh
 
 ---
 
-## 11. Install Kube Prometheus Stack
+## 2. Install Kube Prometheus Stack
 
 ```bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
@@ -30,7 +30,7 @@ kubectl port-forward svc/kind-prometheus-grafana -n monitoring 31000:80 --addres
 
 ---
 
-## 12. Prometheus Queries
+## 3. Prometheus Queries
 
 ```bash
 sum (rate (container_cpu_usage_seconds_total{namespace="default"}[1m])) / sum (machine_cpu_cores) * 100
