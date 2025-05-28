@@ -24,7 +24,8 @@ helm install kind-prometheus prometheus-community/kube-prometheus-stack \
   --set alertmanager.service.nodePort=32000 \
   --set alertmanager.service.type=NodePort \
   --set prometheus-node-exporter.service.nodePort=32001 \
-  --set prometheus-node-exporter.service.type=NodePort
+  --set prometheus-node-exporter.service.type=NodePort \
+  --set prometheus.prometheusSpec.maximumStartupDurationSeconds=300
 kubectl get svc -n monitoring
 kubectl get namespace
 ```
