@@ -51,9 +51,9 @@ kubectl get svc -n prometheus
 Let’s expose Prometheus and Grafana to the external world
 there are 2 ways to expose
 
-1. through Node Port
+1. Node Port
 
-2. through LoadBalancer
+2. LoadBalancer
 
 let’s go with the LoadBalancer
 to attach the load balancer we need to change from ClusterIP to LoadBalancer
