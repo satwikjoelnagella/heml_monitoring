@@ -82,7 +82,9 @@ kubectl get svc -n prometheus
 ```
 Copy the loadBalancer external IP and ping it in the browser
 It will be prompeted for Username & Password
+```bash
 Default Username : admin
 Password: prom-operator
+```
 Now configure the Dashboards and you can visualize the K8s Cluster 
 
